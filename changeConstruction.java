@@ -5,6 +5,20 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class changeConstruction {
+    public static int nonConstructibleChangeF(int[] coins) {
+        int minChange = 0;
+        Arrays.sort(coins);
+        if (coins.length == 0)
+            return 1;
+        for (int i = 0; i < coins.length; i++) {
+            if (minChange + 1 < coins[i]) {
+                break;
+            }
+            minChange += coins[i];
+        }
+        return minChange + 1;
+    }
+
     public static int nonConstructibleChange(int[] coins) {
         if (coins.length == 0 || (coins.length == 1 && coins[0] > 1))
             return 1;
@@ -29,6 +43,6 @@ public class changeConstruction {
 
     public static void main(String[] args) {
         int[] coins = { 1 };
-        System.out.println(nonConstructibleChange(coins));
+        System.out.println(nonConstructibleChangeF(coins));
     }
 }
