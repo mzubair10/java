@@ -1,5 +1,3 @@
-import javax.sound.midi.SysexMessage;
-
 public class subArrayOfSizeK {
     public long maximumSubarraySum(int[] nums, int k) {
         long sum = 0;
