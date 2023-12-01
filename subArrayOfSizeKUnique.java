@@ -31,19 +31,6 @@ public class subArrayOfSizeKUnique {
         return sum;
     }
 
-    public long maximumSubarraySumP(int[] nums, int k) {
-        long sum = 0;
-        Hashtable<Integer, Integer> hTable = new Hashtable<Integer, Integer>();
-        for (int iter = 0; iter < nums.length; iter++) {
-            int range = (iter + k > nums.length ? nums.length : iter + k);
-            Integer[] subarray = IntStream.range(iter, range)
-                    .mapToObj(i -> nums[i])
-                    .toArray(Integer[]::new);
-            
-        }
-        return 0;
-    }
-
     public static void main(String[] args) {
         subArrayOfSizeKUnique s = new subArrayOfSizeKUnique();
         int[] array = { 4, 4, 4 };
