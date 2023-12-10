@@ -15,7 +15,7 @@ public class waitingTime {
     }
 
     public static void main(String[] args) {
-        int[] input = { 3, 2, 1, 2, 6 };
+        int[] input = { 3, 2, 1, 5, 6 };
         System.out.println(minimumWaitingTime(input));
     }
 }
