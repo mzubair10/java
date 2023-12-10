@@ -8,7 +8,6 @@ public class waitingTime {
     }
 
     public static int minimumWaitingTimeR(int[] queries, int res, int sum) {
-
         if (queries.length > 0) {
             return sum + minimumWaitingTimeR(Arrays.copyOfRange(queries, 1, queries.length), queries[0], sum + res);
         }
