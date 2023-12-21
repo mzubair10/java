@@ -33,6 +33,18 @@ public class removeDuplicatesFromLL {
         return returnList;
     }
 
+    public static LinkedList removeDuplicatesFromLinkedListM(LinkedList linkedList) {
+        LinkedList returnList = linkedList;
+        while (returnList.next != null) {
+            if (returnList.value == returnList.next.value) {
+                returnList.next = returnList.next.next;
+            } else {
+                returnList = returnList.next;
+            }
+        }
+        return linkedList;
+    }
+
     public static void main(String[] args) {
         LinkedList l1 = new LinkedList(1);
         l1.next = new LinkedList(2);
@@ -47,7 +59,8 @@ public class removeDuplicatesFromLL {
         l1.next.next.next.next.next.next.next.next.next.next = new LinkedList(11);
         l1.next.next.next.next.next.next.next.next.next.next.next = new LinkedList(12);
         l1.next.next.next.next.next.next.next.next.next.next.next.next = new LinkedList(12);
-        LinkedList returnedLL = removeDuplicatesFromLinkedList(l1);
+        // LinkedList returnedLL = removeDuplicatesFromLinkedList(l1);
+        LinkedList returnedLL = removeDuplicatesFromLinkedListM(l1);
         while (returnedLL != null) {
             System.out.println(returnedLL.value);
             returnedLL = returnedLL.next;
