@@ -1,5 +1,3 @@
-import javax.swing.text.StyleContext.SmallAttributeSet;
-
 public class selectionSort {
     public static int[] selectionSortAlg(int[] array) {
         for (int outer = 0; outer < array.length; outer++) {
